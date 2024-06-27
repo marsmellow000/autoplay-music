@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto Play Music</title>
+</head>
+<body>
+  <audio id="background-music" src="https://drive.usercontent.google.com/download?id=1--LeLjznE73zrWkeJNAST_2s5f0veUtb&export=download&authuser=0" autoplay loop>
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var audio = document.getElementById('background-music');
+      audio.play().catch(function(error) {
+        console.log('Autoplay was prevented. User has to interact with the document first.');
+      });
+    });
+  </script>
+</body>
+</html>
